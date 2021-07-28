@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono&family=Xanh+Mono&display=swap');
+@font-face {
+    font-family: 'maghfirea';
+    src: url('./assets/fonts/Maghfirea.ttf');
+}
+@font-face {
+    font-family: 'otto';
+    src: url('./assets/fonts/OTTOATTACTYPE.ttf');
+}
+@font-face {
+    font-family: 'lagaliane';
+    src: url('./assets/fonts/LaGaglianePersonalUse.ttf');
+}
+@font-face {
+    font-family: 'glitther';
+    src: url('./assets/fonts/GlittherSyavinafree.otf');
+}
+@font-face {
+    font-family: 'miracle';
+    src: url('./assets/fonts/Miracle\ Personal\ use.otf');
+}
+@font-face {
+    font-family: 'qaligo';
+    src: url('./assets/fonts/Qaligo\ Regular\ -\ Demo.otf');
+}
+@font-face {
+    font-family: 'raccosetta';
+    src: url('./assets/fonts/Raccosetta\ demo.ttf');
+}
+@font-face {
+    font-family: 'amor';
+    src: url('./assets/fonts/SomniumAmor.ttf');
+}
+@font-face {
+    font-family: 'amsterdamn';
+    src: url('./assets/fonts/South\ Amsterdam\ Demo.ttf');
+}
+@font-face {
+    font-family: 'appear';
+    src: url('./assets/fonts/AppearsDemoRegular.otf');
+}
+@font-face {
+    font-family: 'hallow';
+    src: url('./assets/fonts/HallowedGrounds.otf');
+}
+@font-face {
+    font-family: 'lotus';
+    src: url('./assets/fonts/LotusEater_Personal_use.otf');
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+.layers {
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    z-index: 2;
+}
+.layers img{
+    background-color: transparent;
+}
+.layer-1,.layer-2 {
+    height: 100vh;
+    width: 50%;
+    background-repeat: no-repeat;
+    /* background-size: 100vw 100vh; */
+    background-color: transparent;
+}
+.layer-0 {
+    width: 100vw;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+.layer-0 img{
+    width:100vw;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.layer-1 {
+    display: flex;
+    justify-content: flex-start;
+}
+.layer-2 {
+    display:flex;
+    justify-content: flex-end;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* overflow: hidden; */
+    height: 100vh;
+    /* box-sizing: border-box; */
+    color: #ffffffc9;
+    background-color: black;
+    /* background-color: rgb(202, 255, 78); */
+    /* background-color: rgb(44, 53, 26); */
+}
+
+a {
+    text-decoration: none;
+}
+
+a :hover {
+
+}
+
+h1 {
+    font-family: '';
+    font-weight: 200;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding:9px;
+}
+
+.header p {
+    padding:0px 30px;
+}
+
+.wrapper {
+    z-index: 2;
+}
+
+.welcome {
+    height:auto;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    color: white;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    top:50%;
+}
+
+.welcome p{
+    display: flex;
+    position: absolute;
+}
+
+.welcome-btn span{
+    font-family:'hallow';
+    /* font-family:'lotus'; */
+    color: white;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    position: relative;
+    z-index: 3;
+}
+
+.welcome-btn span:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid white;
+    transform: scaleX(1);
+}
+
+.welcome-btn span:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.logo-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: all 300ms ease-in-out;
+    top: -230.5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 5%;
+    color: #ffffffc9;
+    opacity: 0;
+    z-index: 3;
+}
+
+.navlinks a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffffc9;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+}
+
+.navlinks span{ 
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-name {
+    display:grid;
+    justify-content: flex-end;
+    position: fixed;
+    padding:0;
+    margin: 0;
+    top: 8%;
+    right: 3%;
+    opacity: 0;
+    z-index: 3;
+}   
+
+.brand-name h1{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.brand-name p{
+    font-size: .7rem;
+    letter-spacing: 1px;
+}
+
+.container{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.showcase {
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+}
+
+.header {
+    top:160vh;
+    height:50vh;
+    width:50vw;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    margin:0 auto;
+    font-size: 1.5rem;
+    /* background-color: rgba(255, 255, 255, 0.048); */
+}
+
+
+
+
+
+
+
+.gridBlock {
+    opacity: 0;
+  }
+  
+  
+  /* Grid almost fully pulled from https://www.rino-pelle.com/ */
+  .grid-container {
+      top:105vh;
+    width: 100vw;
+    height: 500vh;
+    position: absolute;
+  }
+  .grid {
+    top: 13vw;
+    left: -1vw;
+    z-index: 1;
+    width: 70vw;
+    height: 60vw;
+    margin: 0 calc(100vw / 20 * 3);
+    position: absolute;
+    
+  }
+  @media only screen and (max-width: 580px) {
+    .grid {
+      margin: 0;
+      width: 100vw;
+      height: 89.444vw;
+    }
+  }
+  .gridBlock img {
+      background-size: cover;
+  }
+  .gridBlock {
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+  }
+  .gridLayer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    will-change: transform;
+    transform-origin: 44.951% 50%;
+  }
+  .gridLayer:nth-child(1) .gridBlock {
+    top: 1vw;
+    left: -9vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(1) .gridBlock {
+      top: 10.111vw;
+      left: 23.889vw;
+      width: 15vw;
+      height: 15vw;
+    }
+  }
+  .gridLayer:nth-child(2) .gridBlock {
+    top: 1vw;
+    left:16.5vw;
+    width: 15vw;
+    height: 15vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(2) .gridBlock {
+      top: 10;
+      left: 43.333vw;
+      width: 26.389vw;
+      height: 26.389vw;
+    }
+  }
+  .gridLayer:nth-child(3) .gridBlock {
+    left: 16.5vw;
+    top: 25vw;
+    width: 15vw;
+    height: 15vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(3) .gridBlock {
+      top: 30.278vw;
+      left: 0;
+      width: 26.389vw;
+      height: 26.389vw;
+    }
+  }
+  .gridLayer:nth-child(4) .gridBlock {
+    top: 17.5vw;
+    left: 17.5vw;
+    width: 30vw;
+    height: 30vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(4) .gridBlock {
+      top: 30.278vw;
+      left: 30.278vw;
+      width: 39.444vw;
+      height: 39.444vw;
+    }
+  }
+  .gridLayer:nth-child(5) {
+    z-index: 1;
+  }
+  .gridLayer:nth-child(5) .gridBlock {
+    top: 1vw;
+    left: 50vw;
+    width: 5vw;
+    height: 5vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(5) .gridBlock {
+      top: 23.889vw;
+      left: 73.889vw;
+      width: 15.278vw;
+      height: 15.278vw;
+    }
+  }
+  .gridLayer:nth-child(5) a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gridLayer:nth-child(5) svg {
+    width: 1.75vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(5) svg {
+      width: 4.722vw;
+    }
+  }
+  .gridLayer:nth-child(6) .gridBlock {
+    left: 58.5vw;
+    top: 25vw;
+    width: 18vw;
+    height: 20vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(6) .gridBlock {
+      top: 43.889vw;
+      left: 73.889vw;
+      width: 26.389vw;
+      height: 26.389vw;
+    }
+  }
+  .gridLayer:nth-child(7) .gridBlock {
+    left: 7vw;
+    top: 54vw;
+    width: 5vw;
+    height: 5vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(7) .gridBlock {
+      display: none;
+    }
+  }
+  .gridLayer:nth-child(8) .gridBlock {
+    bottom: 1vw;
+    left:28.5vw;
+    width: 5vw;
+    height: 5vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(8) .gridBlock {
+      display: none;
+    }
+  }
+  .gridLayer:nth-child(9) .gridBlock {
+    bottom: 13vw;
+    left: -8.7vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(9) .gridBlock {
+      top: 73.889vw;
+      left: 58.889vw;
+      width: 15.278vw;
+      height: 15.278vw;
+    }
+  }
+  .gridBlock{
+    display: block;
+    position: absolute;
+  }
+
